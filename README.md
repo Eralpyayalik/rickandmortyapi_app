@@ -1,16 +1,16 @@
-# flutter_application_1
+# Rick and Morty
 
-A new Flutter project.
+Rick and Morty karakterlerini API'den çekip kartlar halinde listeleyen bir Flutter uygulaması. Kartlarda karakterin görseli, adı, durumu, türü, bulunduğu yer ve geldiği yer gösteriliyor.
 
-## Getting Started
+HTTP isteği `HomePageViewModel` içinde yapılıyor. JSON verisi `Character` modeline çevriliyor ve Provider üzerinden ekrana aktarılıyor.
 
-This project is a starting point for a Flutter application.
+## Çalıştırma
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+flutter pub get
+flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Uygulama `https://rickandmortyapi.com/api/character` adresini kullanıyor. Mevcut hali ilk sayfadaki karakterleri getiriyor; sonraki sayfaları yükleyen bir akış bulunmuyor.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Veri modeli `lib/models/Rickandmorty_model.dart`, API isteği `lib/models/view_model.dart`, liste ekranı ise `lib/pages/page.dart` içinde.
